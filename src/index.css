@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-900: #064e3b;
+  --color-emerald-800: #065f46;
+  --color-emerald-700: #047857;
+  --color-gold-500: #d4af37;
+  --color-gold-400: #e5c158;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-amiri: "Amiri", serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans;
+  direction: rtl;
+}
+
+.dark body {
+  @apply bg-slate-950 text-slate-100;
+}
+
+.quran-text {
+  font-family: 'Amiri', serif;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-bold mt-4 mb-2 text-emerald-800 dark:text-emerald-400;
+}
+
+.markdown-body p {
+  @apply mb-3 leading-relaxed;
+}
+
+.markdown-body strong {
+  @apply text-gold-500;
+}
