@@ -171,7 +171,15 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg text-gold-200/80 font-medium"
           >
-            إعداد الأستاذ القدير: صالح الرفاعي
+            فكرة وإعداد محب لكتاب الله
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-sm text-gold-300/60 mt-1 italic"
+          >
+            تكرما وتفضلا اشركونا بدعوة خالصة خاصة
           </motion.p>
           
           <button 
@@ -185,19 +193,21 @@ export default function App() {
         {/* Search Section */}
         <section className="mb-12">
           <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto">
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="ابحث عن آية، سورة، أو لفظة قرآنية..."
-              className="w-full px-6 py-4 pr-14 rounded-2xl bg-emerald-900/40 backdrop-blur-sm border-2 border-gold-500/20 focus:border-gold-400 outline-none shadow-2xl text-lg transition-all text-white placeholder:text-gold-200/40"
-            />
-            <button 
-              type="submit"
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-gold-400 hover:text-gold-200 transition-colors"
-            >
-              <Search className="w-6 h-6" />
-            </button>
+            <div className="relative">
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="ابحث عن آية، سورة، أو لفظة قرآنية..."
+                className="w-full px-6 py-4 pl-24 rounded-2xl bg-emerald-900/40 backdrop-blur-sm border-2 border-gold-500/20 focus:border-gold-400 outline-none shadow-2xl text-lg transition-all text-white placeholder:text-gold-200/40"
+              />
+              <button 
+                type="submit"
+                className="absolute left-2 top-1/2 -translate-y-1/2 px-5 py-2 bg-gold-500 hover:bg-gold-400 text-emerald-950 rounded-xl font-bold transition-all shadow-lg active:scale-95"
+              >
+                ابحث
+              </button>
+            </div>
           </form>
 
           <div className="flex justify-center mt-6">
