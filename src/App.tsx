@@ -35,6 +35,7 @@ export default function App() {
   const handleSearch = async (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
+    setResult(null); // Clear previous result immediately for better UX
     setLoading(true);
     try {
       const insight = await getQuranInsight(query);
@@ -48,6 +49,7 @@ export default function App() {
   };
 
   const handleDiscover = async () => {
+    setResult(null); // Clear previous result immediately
     setLoading(true);
     try {
       const insight = await getQuranInsight('', true);
